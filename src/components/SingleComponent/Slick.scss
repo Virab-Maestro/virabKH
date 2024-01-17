@@ -1,0 +1,79 @@
+@keyframes dotsAnimation{
+    0%{
+        opacity: .7;
+        box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.1);
+    }
+    50%{
+        opacity: 0.85;
+        box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.4);
+    }
+    100%{
+        opacity: 1;
+        box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.7);
+    }
+}
+
+.slick{
+    &-slider{
+        overflow-x: hidden;
+        position: relative;
+    }
+    &-track{
+        display: flex;
+    }
+    &-arrow{
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    &-prev{
+        left: 0;
+    }
+    &-next{
+        right: 0;
+    }
+
+    &-dots{
+        font-size: 0;
+        display: flex !important;
+        gap: 10px;
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        li{
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: .7;
+        }
+        .slick-active{
+            animation: dotsAnimation .35s;
+            box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.7);
+            opacity: 1;
+        }
+    }
+}
+
+.slick-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .slick-slider{
+        width: 1000px;
+    }
+    .slick-prev{
+        left: 15px;
+    }
+    .slick-next{
+        right: 15px;
+    }
+    .slick-dots{
+        bottom:42px;
+    }
+}

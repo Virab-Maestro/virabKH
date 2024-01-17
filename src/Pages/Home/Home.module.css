@@ -1,0 +1,67 @@
+.ripple-button {
+    width: 204px;
+    height: auto;
+
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: 2px solid #fff;
+
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50px;
+    transition: all .4s;
+
+    text-transform: capitalize;
+}
+
+@media(max-width: 480px){
+    .ripple-button {
+        font-size: 16px;
+        width: 150px;
+        padding: 7px 17px;
+    }
+}
+
+.ripple-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Ripple color and opacity */
+    border-radius: 50%;
+    opacity: 0;
+    /* transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease; */
+    transition: all .7s;
+}
+
+.ripple-button:hover::before {
+    width: 400px; /* Adjust the width of the ripple effect */
+    height: 400px; /* Adjust the height of the ripple effect */
+    opacity: 1;
+    color: #000
+}
+.ripple-button:hover{
+    color:#161513;
+    background: #fff;
+    
+}
+
+.active{
+    color:#161513;
+    background: #fff;
+    box-shadow: 4px 4px 13px 4px rgba(255, 255, 255, 0.2);
+}
+
+.active::before{
+    width: 400px; /* Adjust the width of the ripple effect */
+    height: 400px; /* Adjust the height of the ripple effect */
+    opacity: 1;
+    color: #000
+}

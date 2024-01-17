@@ -1,0 +1,21 @@
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    /* transform: translate(-50%, 50%) ; */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    box-shadow: 7px 7px 14px 0px rgba(154, 51, 255, 0.21), -14px -7px 14px 0px rgba(255, 134, 96, 0.18);
+    background: #161513;
+    padding: 20px;
+    border-radius: 8px;
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500,600&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body{
+    scroll-behavior:smooth !important;
+    overflow-x: hidden;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: auto;
+    font-family: 'Poppins', sans-serif;
+    color: #C5C5C5;
+}
+
+body{
+    /* position: relative; */
+    background: #161513;
+}
+
+header{
+    font-family: 'Plus Jakarta Sans', sans-serif;   
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul li{
+    font-weight: inherit;
+}
