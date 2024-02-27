@@ -1,6 +1,6 @@
 import styles from "./Home.module.css"
 import avatar from "../../assets/avatar.png"
-import file from "../../download/cv_1.1.pdf"
+import file from "../../download/cv_1.2.pdf"
 
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
@@ -33,7 +33,7 @@ const Home = ()=>{
             <div className="flex justify-between items-center gap-4 flex-nowrap max-w-md mx-auto mb-10 tg:mb-14 md:mb-20">
                 {buttons.map((item, i)=>{
                     if(!item.link)
-                        return(<a href={file} download="cv_1.1.pdf" className={`${styles["ripple-button"]} ${item.classes.join(' ')} ${item.active ? styles["active"]: ''}`} key={item.id} 
+                        return(<a href={file} download="cv_1.2.pdf" className={`${styles["ripple-button"]} ${item.classes.join(' ')} ${item.active ? styles["active"]: ''}`} key={item.id} 
                             onClick={()=>handleClick(item.id)}
                             >{t("home_btn_"+(i+1))}</a>)
                     else 
