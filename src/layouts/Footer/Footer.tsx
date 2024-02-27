@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import whatsapp from '../../assets/wh.svg'
 import telegram from '../../assets/tg.svg' 
 import twitter from '../../assets/x.svg'
@@ -13,9 +14,13 @@ const Footer = ()=>{
             <div className="max-w-[842px] mx-auto py-10 tg:py-20 px-4 text-left">
                 <div className="text-3xl text-white font-bold mb-4 tg:mb-9">{t("footer")}</div>
                 <p className="text-sm tg:text-base font-light max-w-[680px] mb-6">{t("footer_desc")}</p>
-                <div className="flex items-center gap-2 mb-5 tg:mb-10">
+                <div className="flex items-center gap-2 mb-2 tg:mb-3">
                     <Mail size={18}/>
                     <div className="text-sm tg:text-base font-semibold">ed72akk@gmail.com</div>
+                </div>
+                <div className="flex items-center gap-2 mb-5 tg:mb-10">
+                    <Phone size={18}/>
+                    <div className="text-sm tg:text-base font-semibold">+79385114569</div>
                 </div>
                 <div className="flex items-center gap-2 tg:gap-6 -ml-1">
                     <a className="cursor-pointer" href="https://wa.me/79385114569"><img className=" w-[28px] tg:w-[40px] h-[20px] tg:h-[30px] " src={whatsapp} alt="soc" /></a>
